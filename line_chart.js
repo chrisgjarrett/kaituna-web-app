@@ -36,8 +36,8 @@ function drawChart(jsonData) {
     slateGreyColor = ["rgb(105,100,100)"]
     tickColor = ["black"]
     fontFamily = "test" 
-    tickFontScalingFactor = 0.020
-    labelFontScalingFactor = 0.019
+    tickFontScalingFactor = 0.019
+    labelFontScalingFactor = 0.018
 
     const ctx = document.getElementById('myChart').getContext('2d');
     Chart.defaults.font.family ='Segoe UI, Tahoma, Geneva, Verdana, sans-serif'

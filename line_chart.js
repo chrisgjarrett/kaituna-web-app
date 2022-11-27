@@ -29,7 +29,16 @@ function drawChart(jsonData) {
 
     const predictedIndices = (ctx, value) => ctx.p1DataIndex >= graphData.length - numberOfPredictions ? value : undefined;
 
+    // Formatting
+    labelSize = 14
+    tickSize = 18
+    labelColor = ["rgb(100,100,100)"]
+    slateGreyColor = ["rgb(105,100,100)"]
+    tickColor = ["black"]
+    fontFamily = "test" 
+
     const ctx = document.getElementById('myChart').getContext('2d');
+    Chart.defaults.font.family ='Segoe UI, Tahoma, Geneva, Verdana, sans-serif'
     const config =
     {
         type: 'line',
@@ -39,6 +48,7 @@ function drawChart(jsonData) {
                 data: graphData,
                 backgroundColor: ['white'],
                 label: [""],
+                borderColor:["rgb(105,100,100)"],
                 segment: {
                     borderColor: (ctx) => predictedIndices(ctx, 'rgb(192,75,75)'),
                     borderDash: (ctx) => predictedIndices(ctx, [6, 6]),
@@ -58,25 +68,42 @@ function drawChart(jsonData) {
             aspectRatio: 2.25,
             scales: {
                 y: {
+                    ticks: {
+                        color:tickColor,
+                        font: {
+                            size: tickSize,
+                        }
+                    },
                     title: {
                         display:true,
-                        text: 'Gate Levels'
+                        text: 'Gate Level',
+                        color:labelColor,
+                        font: {
+                            size:labelSize,
+                        },
                     }
                 },
                 x: {
+                    ticks: {
+                        color:tickColor,
+                        font: {
+                        size: tickSize,
+                            }
+                    },
                     title: {
                         display:false,
-                        text: 'Date'
-                    }
+                        text: 'Date',
+                        color:labelColor,
+                        font: {
+                            size:labelSize,
+                        }
+                    },
+                    
                 }
-            },
-            ticks: {
-                min: 0,
-                beginAtZero: true,
             },
             hover: {
             mode: 'index',
-            intersect: true
+            intersect: true,
             },
         }
     }

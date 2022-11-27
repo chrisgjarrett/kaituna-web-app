@@ -69,6 +69,9 @@ function drawChart(jsonData) {
             scales: {
                 y: {
                     ticks: {
+                        callback: function(value, index, values) {
+                            return value
+                        },
                         color:tickColor,
                         font: {
                             size: tickSize,
@@ -102,11 +105,12 @@ function drawChart(jsonData) {
                 }
             },
             hover: {
-            mode: 'index',
-            intersect: true,
+                mode: 'index',
+                intersect: true,
             },
         }
     }
 
     const myChart = new Chart(ctx, config);
 }
+

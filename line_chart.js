@@ -38,7 +38,7 @@ function drawChart(jsonData) {
     tickColor = ["black"]
     fontFamily = "test" 
     tickFontScalingFactor = 0.017
-    labelFontScalingFactor = 0.015
+    labelFontScalingFactor = 0.014
     titleFontScalingFactor = 0.02
 
     const ctx = document.getElementById('myChart').getContext('2d');
@@ -80,7 +80,7 @@ function drawChart(jsonData) {
                     }
                 }
             },
-            aspectRatio: 2.25,
+            aspectRatio: 2,
             scales: {
                 y: {
                     ticks: {

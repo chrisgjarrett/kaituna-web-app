@@ -34,10 +34,12 @@ function drawChart(jsonData) {
     tickSize = 18
     labelColor = ["rgb(100,100,100)"]
     slateGreyColor = ["rgb(105,100,100)"]
+    titleColor = ["black"]
     tickColor = ["black"]
     fontFamily = "test" 
     tickFontScalingFactor = 0.017
     labelFontScalingFactor = 0.015
+    titleFontScalingFactor = 0.02
 
     const ctx = document.getElementById('myChart').getContext('2d');
     Chart.defaults.font.family ='Segoe UI, Tahoma, Geneva, Verdana, sans-serif'
@@ -66,6 +68,17 @@ function drawChart(jsonData) {
             },
             plugins: {
                 legend: false,
+                title: {
+                    display: true,
+                    text: 'Predicted Gate Levels',
+                    color: titleColor,
+                    font: {
+                        size: (ctx) => {
+
+                            return Math.round($(window).innerHeight() * titleFontScalingFactor);
+                        }
+                    }
+                }
             },
             aspectRatio: 2.25,
             scales: {
@@ -77,17 +90,17 @@ function drawChart(jsonData) {
                         color:tickColor,
                         font: {
                             size: (ctx) => {
-                                return Math.round($(window).innerWidth() * tickFontScalingFactor);
+                                return Math.round($(window).innerHeight() * tickFontScalingFactor);
                             }
                         }
                     },
                     title: {
-                        display:true,
+                        display:false,
                         text: 'Gate Level',
                         color:labelColor,
                         font: {
                             size: (ctx) => {
-                                return Math.round($(window).innerWidth() * labelFontScalingFactor);
+                                return Math.round($(window).innerHeight() * labelFontScalingFactor);
                             }
                         }
                     }
@@ -97,7 +110,7 @@ function drawChart(jsonData) {
                         color:tickColor,
                         font: {
                             size: (ctx) => {
-                                return Math.round($(window).innerWidth() * tickFontScalingFactor);
+                                return Math.round($(window).innerHeight() * tickFontScalingFactor);
                             }
                         }
                     },

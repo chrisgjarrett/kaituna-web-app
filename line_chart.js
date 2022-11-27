@@ -36,6 +36,8 @@ function drawChart(jsonData) {
     slateGreyColor = ["rgb(105,100,100)"]
     tickColor = ["black"]
     fontFamily = "test" 
+    tickFontScalingFactor = 0.027
+    labelFontScalingFactor = 0.025
 
     const ctx = document.getElementById('myChart').getContext('2d');
     Chart.defaults.font.family ='Segoe UI, Tahoma, Geneva, Verdana, sans-serif'
@@ -74,7 +76,9 @@ function drawChart(jsonData) {
                         },
                         color:tickColor,
                         font: {
-                            size: tickSize,
+                            size: (ctx) => {
+                                return Math.round(ctx.chart.width * tickFontScalingFactor);
+                            }
                         }
                     },
                     title: {
@@ -82,23 +86,29 @@ function drawChart(jsonData) {
                         text: 'Gate Level',
                         color:labelColor,
                         font: {
-                            size:labelSize,
-                        },
+                            size: (ctx) => {
+                                return Math.round(ctx.chart.width * labelFontScalingFactor);
+                            }
+                        }
                     }
                 },
                 x: {
                     ticks: {
                         color:tickColor,
                         font: {
-                        size: tickSize,
+                            size: (ctx) => {
+                                return Math.round(ctx.chart.width * tickFontScalingFactor);
                             }
+                        }
                     },
                     title: {
                         display:false,
                         text: 'Date',
                         color:labelColor,
                         font: {
-                            size:labelSize,
+                            size: (ctx) => {
+                                return Math.round(ctx.chart.width * labelFontScalingFactor);
+                            }
                         }
                     },
                     

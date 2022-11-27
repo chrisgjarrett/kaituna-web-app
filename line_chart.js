@@ -77,7 +77,7 @@ function drawChart(jsonData) {
                         color:tickColor,
                         font: {
                             size: (ctx) => {
-                                return Math.round($(window).height() * tickFontScalingFactor);
+                                return Math.round($(window).width() * tickFontScalingFactor);
                             }
                         }
                     },
@@ -87,7 +87,7 @@ function drawChart(jsonData) {
                         color:labelColor,
                         font: {
                             size: (ctx) => {
-                                return Math.round($(window).height() * labelFontScalingFactor);
+                                return Math.round($(window).width() * labelFontScalingFactor);
                             }
                         }
                     }
@@ -97,7 +97,7 @@ function drawChart(jsonData) {
                         color:tickColor,
                         font: {
                             size: (ctx) => {
-                                return Math.round($(window).height() * tickFontScalingFactor);
+                                return Math.round($(window).width() * tickFontScalingFactor);
                             }
                         }
                     },
@@ -107,7 +107,7 @@ function drawChart(jsonData) {
                         color:labelColor,
                         font: {
                             size: (ctx) => {
-                                return Math.round($(window).height() * labelFontScalingFactor);
+                                return Math.round($(window).width() * labelFontScalingFactor);
                             }
                         }
                     },

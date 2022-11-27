@@ -37,7 +37,7 @@ function drawChart(jsonData) {
     tickColor = ["black"]
     fontFamily = "test" 
     tickFontScalingFactor = 0.027
-    labelFontScalingFactor = 0.025
+    labelFontScalingFactor = 0.026
 
     const ctx = document.getElementById('myChart').getContext('2d');
     Chart.defaults.font.family ='Segoe UI, Tahoma, Geneva, Verdana, sans-serif'
@@ -77,7 +77,7 @@ function drawChart(jsonData) {
                         color:tickColor,
                         font: {
                             size: (ctx) => {
-                                return Math.round(ctx.chart.width * tickFontScalingFactor);
+                                return Math.round($(window).height() * tickFontScalingFactor);
                             }
                         }
                     },
@@ -87,7 +87,7 @@ function drawChart(jsonData) {
                         color:labelColor,
                         font: {
                             size: (ctx) => {
-                                return Math.round(ctx.chart.width * labelFontScalingFactor);
+                                return Math.round($(window).height() * labelFontScalingFactor);
                             }
                         }
                     }
@@ -97,7 +97,7 @@ function drawChart(jsonData) {
                         color:tickColor,
                         font: {
                             size: (ctx) => {
-                                return Math.round(ctx.chart.width * tickFontScalingFactor);
+                                return Math.round($(window).height() * tickFontScalingFactor);
                             }
                         }
                     },
@@ -107,7 +107,7 @@ function drawChart(jsonData) {
                         color:labelColor,
                         font: {
                             size: (ctx) => {
-                                return Math.round(ctx.chart.width * labelFontScalingFactor);
+                                return Math.round($(window).height() * labelFontScalingFactor);
                             }
                         }
                     },

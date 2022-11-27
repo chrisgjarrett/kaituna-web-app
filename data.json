@@ -1,0 +1,13 @@
+{
+    "HistoricalData":{
+        "18 Nov":"1500",
+        "19 Nov":"800",
+        "20 Nov":"700",
+        "Today":"100"
+    },
+    "PredictedData":{
+        "22 Nov":"200",
+        "23 Nov":"400",
+        "24 Nov":"1000"
+    }
+}

@@ -1,4 +1,4 @@
-fetch('data.json')
+fetch('https://kaituna-data.s3.amazonaws.com/data.json')
     .then(function (response) {
         return response.json();
     }).then(function (json) {

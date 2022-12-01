@@ -92,7 +92,8 @@ function drawChart(jsonData) {
                             size: (ctx) => {
                                 return Math.round($(window).innerHeight() * tickFontScalingFactor);
                             }
-                        }
+                        },
+                        precision:0,
                     },
                     title: {
                         display:false,

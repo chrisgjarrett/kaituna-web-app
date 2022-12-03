@@ -61,12 +61,6 @@ function drawChart(jsonData) {
             }]
         },
         options: {
-            scales:{
-                y:{
-                    suggestedMin: 0,
-                    beginAtZero: true,
-                }
-            },
             layout: {
               padding: {
                 top: 50
@@ -89,6 +83,7 @@ function drawChart(jsonData) {
             aspectRatio: 2,
             scales: {
                 y: {
+                    beginAtZero: true,
                     ticks: {
                         callback: function(value, index, values) {
                             return value

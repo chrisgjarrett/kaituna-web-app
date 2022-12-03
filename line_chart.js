@@ -61,6 +61,11 @@ function drawChart(jsonData) {
             }]
         },
         options: {
+            scales:{
+                y:{
+                    beginAtZero: true
+                }
+            },
             layout: {
               padding: {
                 top: 50

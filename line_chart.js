@@ -63,7 +63,8 @@ function drawChart(jsonData) {
         options: {
             scales:{
                 y:{
-                    beginAtZero: true
+                    suggestedMin: 0,
+                    beginAtZero: true,
                 }
             },
             layout: {

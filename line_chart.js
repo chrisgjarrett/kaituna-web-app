@@ -83,7 +83,7 @@ function drawChart(jsonData) {
             aspectRatio: 2,
             scales: {
                 y: {
-                    suggestedMin: 0,
+                    beginAtZero: true,
                     ticks: {
                         callback: function(value, index, values) {
                             return value

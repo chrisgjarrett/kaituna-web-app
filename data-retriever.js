@@ -1,20 +1,18 @@
-// Get parsed json file
-jsonData = get_json_from_bucket()
+fetch('https://kaituna-data.s3.amazonaws.com/data.json')
+    .then(function (response) 
+    {
+        return response.json();
+    }).then(function (json) 
+    {
+        drawChart(json);
+        document.getElementById("lastUpdatedField").innerHTML = json.LastUpdated
 
-// Set updated field
-document.getElementById("lastUpdatedField").innerHTML = 2//jsonData["LastUpdated"]
+    }).catch(function (error) 
+    {
+        console.error(error);
+    });
 
-// Call the chart
-drawChart(jsonData)
 
-// Retrieve the data from the bucket
-function get_json_from_bucket()
-{
-    var jsonDataResponse = fetch('https://kaituna-data.s3.amazonaws.com/data.json')
-    jsonData = jsonDataResponse.json()
-
-    return jsonData
-}
 
 // Draws the line chart
 function drawChart(jsonData) {

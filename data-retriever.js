@@ -10,10 +10,10 @@ drawChart(jsonData)
 // Retrieve the data from the bucket
 function get_json_from_bucket()
 {
-    var jsonData = fetch('https://kaituna-data.s3.amazonaws.com/data.json')
-    parsedJson = Object.values(jsonData)
+    var jsonDataResponse = fetch('https://kaituna-data.s3.amazonaws.com/data.json')
+    jsonData = jsonDataResponse.json()
 
-    return parsedJson
+    return jsonData
 }
 
 

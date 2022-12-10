@@ -1,4 +1,4 @@
-import {drawChart} from './line-chart.js';
+//import {drawChart} from './line-chart.js';
 
 // Get parsed json file
 jsonData = get_json_from_bucket()
@@ -18,7 +18,7 @@ function get_json_from_bucket()
     return parsedJson
 }
 
-/*
+
 // Draws the line chart
 function drawChart(jsonData) {
      
@@ -150,4 +150,3 @@ function drawChart(jsonData) {
 
     const myChart = new Chart(ctx, config);
 }
-*/

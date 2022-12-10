@@ -2,7 +2,7 @@
 jsonData = get_json_from_bucket()
 
 // Set updated field
-document.getElementById("lastUpdatedField").jsonData["LastUpdated"]
+document.getElementById("lastUpdatedField").innerHTML = jsonData["LastUpdated"]
 
 // Call the chart
 drawChart(jsonData)

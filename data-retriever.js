@@ -12,8 +12,6 @@ fetch('https://kaituna-data.s3.amazonaws.com/data.json')
         console.error(error);
     });
 
-
-
 // Draws the line chart
 function drawChart(jsonData) {
      

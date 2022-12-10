@@ -1,8 +1,6 @@
-
 export function drawChart(jsonData) {
-    
+   /*  
     //Parse json
-    //parsedJson = Object.values(jsonData)
     historicalData = jsonData.HistoricalData
     predictedData = jsonData.PredictedData
         
@@ -127,7 +125,7 @@ export function drawChart(jsonData) {
             },
         }
     }
-
-    const myChart = new Chart(ctx, config);
+*/
+    //const myChart = new Chart(ctx, config);
 }
 

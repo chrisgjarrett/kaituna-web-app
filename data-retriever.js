@@ -1,10 +1,10 @@
-import {drawChart} from './line-chart'
+import {drawChart} from './line-chart.js'
 
 // Get parsed json file
-jsonData = get_json_from_bucket()
+//jsonData = get_json_from_bucket()
 
 // Set updated field
-document.getElementById("lastUpdatedField").innerHTML=jsonData["LastUpdated"]
+document.getElementById("lastUpdatedField").innerHTML= 2//jsonData["LastUpdated"]
 
 // Call the chart
 drawChart(jsonData)

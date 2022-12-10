@@ -5,9 +5,7 @@ fetch('https://kaituna-data.s3.amazonaws.com/data.json')
     }).then(function (json) 
     {
         drawChart(json)
-        updatedTimeRaw = json.LastUpdated
-        document.getElementById("lastUpdatedField").innerHTML = updatedTimeRaw
-
+        document.getElementById("lastUpdatedField").innerHTML = json.LastUpdated
     }).catch(function (error) 
     {
         console.error(error);

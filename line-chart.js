@@ -1,5 +1,5 @@
-export function drawChart(jsonData) {
-   /*  
+function drawChart(jsonData) {
+     
     //Parse json
     historicalData = jsonData.HistoricalData
     predictedData = jsonData.PredictedData
@@ -125,7 +125,9 @@ export function drawChart(jsonData) {
             },
         }
     }
-*/
-    //const myChart = new Chart(ctx, config);
+
+    const myChart = new Chart(ctx, config);
 }
 
+
+export{drawChart};
